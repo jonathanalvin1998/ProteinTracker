@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,26 @@ public class MainActivity extends AppCompatActivity {
 
         Button helpBtn = (Button)findViewById(R.id.helpButton);
         helpBtn.setOnClickListener(helpButtonListener);
+
+        Button layoutBtn = (Button)findViewById(R.id.layoutButton);
+
+        Button appBtn = (Button)findViewById(R.id.appButton);
+
+        appBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent i = new Intent(MainActivity.this,Main3Activity.class);
+                startActivity(i);
+            }
+        });
+
+        layoutBtn.setOnClickListener(new View.OnClickListener(){
+        @Override
+        public void onClick(View view){
+            Intent i = new Intent(MainActivity.this,Main2Activity.class);
+            startActivity(i);
+        }
+        });
 
         Button myBtn = (Button)findViewById(R.id.button1);
         myBtn.setOnClickListener(new View.OnClickListener() {
